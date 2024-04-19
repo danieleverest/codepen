@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    background: #333;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+  
+  .card-group,
+  .card {
+    aspect-ratio: 5 / 7;
+    background: rgba(255, 255, 255, 0.05);
+    position: absolute;
+  }
+  
+  .card-group,
+  .big-card {
+    width: 30vmin;
+    border-radius: 1vmin;
+  }
+  
+  .small-card {
+    width: 12vmin;
+    border-radius: 1.5vmin;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .big-card:nth-child(2) {
+    transform: translateX(-10%) rotate(-1deg);
+  }
+  
+  .big-card:nth-child(4) {
+    transform: rotate(2deg);
+  }
+  
+  .big-card:nth-child(6) {
+    transform: translateX(-6%) rotate(-3deg);
+  }
+  
+  .big-card:nth-child(8) {
+    transform: translateX(20%, 3%) rotate(5deg);
+  }

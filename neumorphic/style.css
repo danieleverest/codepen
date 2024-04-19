@@ -1,0 +1,61 @@
+@import url('https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css');
+
+button.neumorphic {
+  container-type: inline-size;
+  aspect-ratio: 1/1;
+  border: 0.5rem solid transparent;
+  border-radius: 1rem;
+  color: hsl(0 0% 10%);
+  background: none;
+  
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  
+  --shadow: 
+    -.5rem -.5rem 1rem hsl(0 0% 100% / .75),
+    .5rem .5rem 1rem hsl(0 0% 50% / .5);
+  box-shadow: var(--shadow);
+  outline: none;  
+  transition: all 0.1s;
+  
+  &:hover, &:focus-visible {
+    color: hsl(10 80% 50%);
+    scale: 1.1
+  }
+  &:active, &.active{
+    box-shadow:
+      var(--shadow),
+      inset .5rem .5rem 1rem hsl(0 0% 50% / .5),
+      inset -.5rem -.5rem 1rem hsl(0 0% 100% / .75);
+    color: hsl(10 80% 50%);
+    > i { font-size: 28cqi};
+    > span { font-size: 13cqi};
+  }
+
+  >i {
+    font-size: 31cqi;
+  }
+  > span {
+    font-family: system-ui, sans-serif;
+    font-size: 16cqi;
+  }
+}
+
+body {
+  background-color: #e5e9f4;
+  padding: 2rem;
+}
+h1 {
+  text-align: center;
+  color: hsl(0 0% 10%);
+  font-family: system-ui, sans-serif;
+  font-size: 3rem;
+}
+.buttons {
+  display: grid;
+  width: min(75rem, 100%);
+  margin-inline: auto;
+  grid-template-columns: repeat(auto-fit, minmax(min(8rem, 100%), 1fr));
+  gap: 2rem;
+}

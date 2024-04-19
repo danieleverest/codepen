@@ -1,0 +1,63 @@
+body {
+    padding-top: 50px;
+  }
+  
+  .carousel {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          font-family: 'Quicksand', sans-serif;
+          overflow-x: hidden;
+          position: relative;
+          top: -2.5rem;
+  
+          .card-carousel {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+  
+              .my-card {
+                  height: 20rem;
+                  width: 170px;
+                  position: relative;
+                  z-index: 1;
+                  -webkit-transform: scale(0.6) translateY(-2rem);
+                  transform: scale(0.6) translateY(-2rem);
+                  opacity: 0;
+                  cursor: pointer;
+                  pointer-events: none;
+                  background: #2e5266;
+                  background: linear-gradient(to top, #2e5266, #6e8898);
+                  transition: 1s;
+              }
+                
+              .my-card.active {
+                  z-index: 3;
+                  -webkit-transform: scale(1) translateY(0) translateX(0);
+                  transform: scale(1) translateY(0) translateX(0);
+                  opacity: 1;
+                  pointer-events: auto;
+                  transition: 1s;
+              }
+                
+              .my-card.prev, .my-card.next {
+                  z-index: 2;
+                  opacity: 0.6;
+                  pointer-events: auto;
+                  transition: 1s;
+              }
+  
+              .my-card.prev {
+                  -webkit-transform: scale(0.8) translateY(-1rem) translateX(26rem);
+                  transform: scale(0.8) translateY(-1rem) translateX(26rem);
+              }
+  
+              .my-card.next {
+                  -webkit-transform: scale(0.8) translateY(-1rem) translateX(-26rem);
+                  transform: scale(0.8) translateY(-1rem) translateX(-26rem);
+              }
+          }
+      }

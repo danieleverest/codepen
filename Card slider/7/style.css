@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: verdana;
+    font-size: 16px;
+  }
+  #app {
+    background: #e7ecff;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s ease-in;
+  }
+  #app.darkmode {
+    background: #333;
+    transition: 0.3s ease-in;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-start: 1;
+    grid-gap: 25px;
+    margin: auto;
+  }
+  
+  /* -------- Button Dark / Light ------- */
+  figure {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .toggle {
+    display: flex;
+    position: relative;
+    width: 7.5rem;
+    height: 2.5rem;
+    background: white;
+    border-radius: 6px;
+    align-self: center;
+    user-select: none;
+    margin: 2rem;
+    box-shadow: 0 15px 20px -10px #b3c9fa;
+    transition: 0.2s ease-in;
+  }
+  .darkmode .toggle {
+    box-shadow: 0 15px 20px -10px #181818;
+    transition: 0.2s ease-in;
+  }
+  
+  .toggle:after,
+  .toggle:before {
+    flex: 1;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+  .toggle:after {
+    content: "Light";
+  }
+  .toggle:before {
+    content: "Dark";
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: 1000;
+    cursor: pointer;
+  }
+  .card {
+    position: relative;
+    background: #599cff;
+    border-radius: 6px;
+    transition: 0.4s;
+    width: 50%;
+    height: 2.5rem;
+    pointer-events: none;
+  }
+  
+  input:checked + label .card {
+    background: #272727;
+    border-radius: 6px;
+  }
+  
+  .slide .card {
+    transform: translate(0);
+  }
+  .slide input:checked + label .card {
+    transform: translateX(3.75rem);
+  }
+  /* -------- End button Dark / Light ------- */
+  
+  
+  .cards {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 160px;
+    height: 100px;
+    transition: 0.2s ease !important;
+    box-shadow: 0 15px 20px -10px #b3bdfa;
+  }
+  .darkmode .cards {
+    box-shadow: 0 25px 15px -15px #242424;
+  }
+  .darkmode .cards:not(.not) {
+    background: #222;
+    transition: 0.3s ease-in;
+    box-shadow: 0 25px 15px -15px #242424;
+  }
+  
+  .cards span {
+    padding: 0 1rem;
+    transition: 0.4s ease-in;
+  }
+  
+  .darkmode .cards:not(.not) span {
+    color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 380px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Outfit, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.7s;
+    border-radius: 12px;
+    padding: 1em;
+    /* box-shadow: 0 120px 120px rgba(0,0,0,0.2); */
+}
+
+.card-front {
+    background-color: #aaa;
+    background: url("https://images.unsplash.com/photo-1687191886930-a246ada3cea2?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODkwMDEwMTB8&ixlib=rb-4.0.3&q=85") no-repeat center center / cover;
+    color: #333;
+}
+
+.card-back {
+    background-color: #000;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(360deg);
+}

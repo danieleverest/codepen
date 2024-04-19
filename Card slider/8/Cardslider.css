@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* main body */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.swiper{
+    width: 950px;
+}
+
+/* card editing */
+section .card {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 280px;
+    position: relative;
+    z-index: 1;
+    margin: 20px;
+}
+
+section .card .card_content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section .card::before {
+    content: "";
+    position: absolute;
+    height: 45%;
+    width: 100%;
+    background-color: #782aed;
+    border-radius: 20px 20px 0 0;
+    z-index: -1;
+}
+
+/* image  */
+section .card .image {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    background: #782aed;
+    padding: 3px;
+    
+}
+
+section .card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+
+/* media icons */
+.card .card_content .media_icons {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .card_content .media_icons i {
+    margin: 4px 0;
+    color: #fff;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.card .card_content .media_icons i:hover {
+    opacity: 1;
+}
+
+/* name */
+.card .card_content .name_profession{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.card .card_content .name_profession .name{
+    font-size: 20px;
+    font-weight: 600;
+}
+.card .card_content .name_profession .profession{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* rating  */
+.card .card_content .rating{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.card .card_content .rating i{
+    /* color: #782aed; */
+    margin: 0 7px;
+}
+
+/* about me and hire me  */
+.card .card_content .button{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 15px;
+}
+.card .card_content .button button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: #782aed;
+    color: #fff;
+    border-radius: 20px;
+    padding: 8px 22px;
+    transition: all 0.2s ease;
+}
+.card .card_content .button button:hover{
+    background-color: #6616d0;
+}

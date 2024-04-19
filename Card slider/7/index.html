@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app" class="container" :class="{darkmode: dark == 'yes'}">
+
+        <div class="row">
+            <div class="toggle slide">
+                <input id="c" type="checkbox" @click="dark == 'no' ? dark = 'yes' : dark = 'no'" />
+                <label for="c">
+                    <div class="card slide"></div>
+                </label>
+            </div>
+            </figure>
+        </div>
+        <div class="row">
+            <div class="grid">
+                <div class="cards">
+                    <span>Dark mode</span>
+                </div>
+                <div class="cards">
+                    <span>Dark mode</span>
+                </div>
+                <div class="cards not">
+                    <span>Always light</span>
+                </div>
+                <div class="cards">
+                    <span>Dark mode</span>
+                </div>
+                <div class="cards">
+                    <span>Dark mode</span>
+                </div>
+                <div class="cards not">
+                    <span>Always light</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    dark: 'no'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

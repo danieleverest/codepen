@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,
+body {
+    overscroll-behavior-x: none;
+    overscroll-behavior-y: none;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Asap", sans-serif;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+    background: linear-gradient(
+        135deg,
+        rgba(222, 191, 244, 1) 0%,
+        rgba(255, 178, 178, 1) 100%
+    );
+    color: dimgray;
+    display: grid;
+    place-items: center;
+}
+.wrap {
+    filter: drop-shadow(0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.3));
+}
+.paper {
+    position: relative;
+    width: min(320px, 80vw);
+    height: auto;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    transform: translateZ(0);
+    filter: url(#filter_tornpaper);
+}
+.shape {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: anim 10s ease infinite;
+}
+@keyframes anim {
+    0%,
+    100% {
+        clip-path: circle(50% at 70% 70%);
+    }
+    50% {
+        clip-path: circle(20% at 10% 10%);
+    }
+}
+
+h1 {
+    margin: 1rem 0;
+}
+main {
+    position: relative;
+    padding-bottom: 3rem;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    margin: 1rem 0;
+}
+a {
+    color: currentColor;
+    font-weight: bold;
+}

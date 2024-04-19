@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.test {
+    position: relative;
+    padding: 3rem;
+    width: 40%;
+    max-width: 300px;
+    text-align: center;
+    color: #f1f1f1;
+    background: url("//unsplash.it/507/507") no-repeat center;
+    background-size: cover;
+    margin: auto;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.test::after,
+.test::before {
+    content: '';
+    position: absolute;
+    border: 2px solid white;
+}
+
+.test::before {
+    top: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.test::after {
+    left: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+    line-height: 3rem;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    background: #9b59b6;
+    top: 0;
+    left: -5rem;
+    width: calc(100% + 5rem);
+    height: 100%;
+    box-shadow: inset -15px 0 10px -10px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3rem;
+    top: 0;
+    left: calc(100% + 3rem);
+    background: #9b59b6;
+    box-shadow: inset 12px 0 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 0.8em;
+}

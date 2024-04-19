@@ -1,0 +1,439 @@
+body {
+    margin: 0 auto;
+    background-image: url(https://images.unsplash.com/photo-1445620466293-d6316372ab59?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=bccb92db735f108588edea0330bb2aca);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: Times, monospace;
+    font-size: x-large;
+    font-weight: lighter;
+    height: 94.7vh;
+    min-height: 568px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 1s;
+}
+
+a:hover {
+    color: #01F5FE;
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-bottom: solid #B3E5FC 1px;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 140%;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header h4 {
+    margin-bottom: 0px;
+}
+
+.card-sheet {
+    width: 100%;
+    position: relative;
+    left: -125%;
+    transition-duration: 1.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    height: 500px;
+    width: auto;
+}
+
+.card-slide {
+    left: 0%;
+}
+
+.flip-container,
+.front,
+.back {
+    /*width: 150px;*/
+    border-radius: 1%;
+    transition: 1s;
+}
+
+
+/* Removed perspective: 1000 */
+
+.flip-container {
+    height: 90%;
+    width: 23%;
+    max-width: 250px;
+    min-width: 190px;
+    padding: 0;
+    margin: 0;
+}
+
+.flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flipper {
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: relative;
+    height: inherit;
+    width: 100%
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+    position: absolute;
+    text-align: center;
+    box-shadow: 5px 5px 25px black;
+    /*border: 5px solid white;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, black, #01579B);
+    height: inherit;
+    width: 100%;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.front p {
+    border-bottom: solid white;
+    width: 150px;
+    padding-bottom: 20px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back li {
+    padding-bottom: 10px;
+}
+
+.back button {
+    border: thin;
+    background: linear-gradient(to top left, black, #01579B);
+    box-shadow: 5px 5px 25px black;
+    color: white;
+    /*#01F5FE*/
+    width: 80px;
+    height: 40px;
+}
+
+.back button:hover {
+    color: #01F5FE;
+}
+
+.back button:focus {
+    outline: none;
+    box-shadow: none;
+    color: black;
+    background: linear-gradient(to top left, black, #01579B);
+}
+
+footer {
+    font-size: small;
+    margin-bottom: 0;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    color: #E1F5FE;
+}
+
+footer p {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: calc(100vh /13);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 120%;
+}
+
+footer ul {
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+footer li {
+    display: inline;
+    margin-right: 5px;
+}
+
+footer img {
+    height: 50px;
+}
+
+.hidden-modals {
+    display: none;
+    text-align: center;
+}
+
+.nanoModal {
+    padding: 0;
+    text-align: center;
+}
+
+.card-enlarged {
+    text-align: center;
+    box-shadow: 5px 5px 25px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, black, #01579B);
+    height: 600px;
+    width: 100%;
+    border: 5px solid white;
+}
+
+#skill-modal ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#who-modal {
+    flex-direction: column;
+    text-align: left;
+    font-size: 70%;
+    font-size: .65em;
+}
+
+#who-modal p {
+    padding: 0;
+}
+
+.image-quote {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-around
+}
+
+.image-quote img {
+    width: 170px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.image-quote p {
+    padding: 0;
+    margin-right: 50px;
+    margin-left: 10px;
+    width: 200px;
+    font-style: italic;
+}
+
+.about-me-enlarged {
+    margin: 10px;
+}
+
+.about-me-enlarged p {
+    margin-bottom: 10px;
+}
+
+#skill-modal h1 {
+    font-size: 120%;
+    text-decoration: underline;
+}
+
+#skill-modal li {
+    font-size: 75%;
+    margin: 5px;
+}
+
+#skill-modal hr {
+    width: 95%;
+}
+
+.gallery {
+    padding: .5vw;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: auto;
+}
+
+.gallery figure {
+    width: 45%;
+    max-width: 230px;
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.gallery figure img {
+    width: 100%;
+    height: auto;
+}
+
+#modal-contact-me {
+    margin-bottom: 10px;
+}
+
+flex-direction: column;
+text-align: left;
+font-size: 70%;
+font-size: .65em;
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-container p {
+    font-size: 70%;
+    font-size: .65em;
+}
+
+.contact-container hr {
+    width: 95%;
+}
+
+form input {
+    width: 90%;
+}
+
+input[name="subject"] {
+    transform: translateX(-3px);
+}
+
+textarea[name="message"] {
+    width: 90%;
+    transform: translateX(-3px);
+    margin-top: 5px;
+}
+
+input[type=submit] {
+    border: thin;
+    background: linear-gradient(to top left, black, #01579B);
+    box-shadow: 5px 5px 25px black;
+    color: white;
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+input[type=submit]:hover {
+    color: #01F5FE;
+}
+
+input[type=submit]:focus {
+    outline: none;
+    box-shadow: none;
+    color: black;
+    background: linear-gradient(to top left, black, #01579B);
+}
+
+.nanoModal.nanoModalOverride,
+.nanoModalOverlay.nanoModalOverride {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nanoModal.nanoModalOverride {
+    /*position: fixed;*/
+    left: 50%;
+    width: 50%;
+    max-width: 520px;
+}
+
+@media screen and (max-width: 800px) {
+    html {
+        height: 170vh;
+    }
+
+    .card-sheet {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .flip-container {
+        min-width: 180px;
+        width: 250px;
+        height: 190px;
+        margin-bottom: 50px;
+    }
+
+    .back {
+        font-size: 60%;
+    }
+
+    footer {
+        margin-top: 420px;
+    }
+
+    #who-modal {
+        font-size: 60%;
+    }
+
+    #who-modal .image-quote p {
+        margin-right: 10px;
+    }
+
+    .gallery figure {
+        margin: 0;
+    }
+
+    .gallery {
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .nanoModal.nanoModalOverride {
+        position: fixed;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .contact-container {
+        width: 95%;
+    }
+
+    .contact-container img {}
+
+    form input {}
+
+    textarea[name="message"] {}
+}
+
+@media screen and (max-width: 1195px) {
+    body {
+        height: 110vh;
+    }
+}
+
+@media screen and (min-width: 801px) {
+
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .back {
+        font-size: 65%;
+    }
+}
